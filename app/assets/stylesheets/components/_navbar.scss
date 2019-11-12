@@ -3,6 +3,7 @@
   background: white;
   background-color: white;
   transition: 0.5s background-color ease;
+}
 
 .navbar-airbnb .navbar-collapse {
   flex-grow: 0;
@@ -18,7 +19,7 @@
   vertical-align: middle !important;
   line-height: 1 !important;
   padding: 8px !important;
-  border-bottom: 2px solid transparent
+  border-bottom: 2px solid transparent;
 }
 
 .avatar {
@@ -67,5 +68,4 @@
 
 .nav-links a:hover{
   background-size: 100% 2px, auto;
-
 }
