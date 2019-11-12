@@ -1,0 +1,52 @@
+.venue-card {
+  display: flex;
+  margin: 1rem auto;
+  margin-bottom: 1.6%;
+  background: white;
+  line-height: 1.4;
+  font-family: sans-serif;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0;
+  height: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+.meta {
+  position: relative;
+  z-index: 0;
+  height: 200px;
+}
+.image {
+  width: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: transform .2s;
+}
+
+.card-product-info {
+  padding: 1rem;
+  background:white;
+  flex-grow: 1;
+  z-index: 1;
+}
+.card-product-info h3{
+  margin:0px;
+  font-size:12px;
+}
+
+.card-product-info h2{
+  margin:0px;
+  font-size: 12px;
+}
+.card-product-info h1{
+  margin-bottom: 0px;
+}
+
+.card-product-info p{
+  justify-content: right;
+  margin-bottom: 0px;
+  margin-top:60px;
+}
+
+
