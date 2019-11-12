@@ -1,12 +1,70 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
   background: white;
+  text-decoration: none;
+  position: sticky;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navigation {
+  text-align: right;
+  margin: 25px;
+}
+.avatar-box{
+  display: inline-block !important;
+  vertical-align: middle !important;
+  line-height: 1 !important;
+  padding: 8px !important;
+  border-bottom: 2px solid transparent
+}
+
+.avatar {
   width: 40px;
+  border-radius: 50%;
+}
+
+.nav-link{
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.horizontal-line {
+  border-top: 1px solid black;
+  width: auto;
+}
+
+a{
+  padding: 10px;
+  text-decoration:none;
+  text-rendering: auto;
+  color: buttontext;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: center;
+  cursor: default;
+  font: 400 11px system-ui;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #484848;
+  transition-timing-function: ease-out !important;
+  background-image: linear-gradient(black, black), linear-gradient(white, white);
+  background-size: 0 5px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .2s ease-out;
+}
+
+a:hover{
+  background-size: 100% 5px, auto;
+
 }
