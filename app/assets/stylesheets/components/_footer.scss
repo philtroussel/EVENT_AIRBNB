@@ -1,0 +1,30 @@
+.horizontal-line {
+  border-top: 1px solid black;
+  width: auto;
+  padding-bottom: 10px;
+}
+
+.footer {
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.footer-links {
+  text-align: center;
+  font-size: 24px;
+}
+
+.footer-links a {
+  color: black;
+  opacity: 0.5;
+  text-decoration: none;
+  padding: 0px 10px;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: black;
+}
