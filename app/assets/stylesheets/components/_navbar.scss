@@ -10,7 +10,7 @@
 }
 
 .navigation {
-  text-align: right;
+  text-align: center;
   margin: 25px;
 }
 
@@ -68,4 +68,9 @@
 
 .nav-links a:hover{
   background-size: 100% 2px, auto;
+}
+
+.navbar {
+  justify-content: flex-end;
+  height:75px;
 }

@@ -7,11 +7,11 @@
         </li>
 
         <li class="nav-links">
-          <a class="nav-links" <%= link_to "HELP"%></a>
+          <a class="nav-links" <%= link_to "SAVED"%></a>
         </li>
 
         <li class="nav-links">
-          <a class="nav-links" <%= link_to "SIGN IN"%></a>
+          <a class="nav-links" <%= link_to "HELP"%></a>
         </li>
 
         <li class="nav-links dropdown">
@@ -21,10 +21,6 @@
             <%= link_to "See profile", "#", class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
-        </li>
-
-        <li class="nav-links">
-          <a class="nav-links" <%= link_to "LOGIN", new_user_session_path %></a>
         </li>
     </ul>
   </div>
