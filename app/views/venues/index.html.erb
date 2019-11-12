@@ -1,0 +1,10 @@
+<h1>Venues#index</h1>
+<p>Find me in app/views/venues/index.html.erb</p>
+
+
+<% @venues.each do |venue| %>
+  <%= link_to venue.name, venue_path(venue) %>
+  <%= link_to "Delete", venue_path(venue),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+<% end %>
