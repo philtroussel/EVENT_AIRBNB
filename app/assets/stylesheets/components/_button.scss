@@ -1,0 +1,13 @@
+.btn-white {
+  color: #373A36;
+  border: 1px solid #373A36;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-white:hover {
+  opacity: 1;
+}
