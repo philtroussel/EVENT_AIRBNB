@@ -30,8 +30,9 @@ class VenuesController < ApplicationController
   end
 
   def destroy
-    find_venue
+    @venue = find_venue
     @venue.destroy
+    redirect_to venues_path
   end
 
   private
