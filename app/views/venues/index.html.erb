@@ -1,11 +1,35 @@
-<h1>Venues#index</h1>
-<p>Find me in app/views/venues/index.html.erb</p>
+  <div class="filter" id="filterSupportedContent">
+    <ul class="filter-menu" style="list-style-type:none">
+      <li class="dates-filter">
+        <%= link_to "Dates"%>
+      </li>
+      <li class= "guests-filter">
+        <%= link_to "Guests"%>
+      </li>
+      <li class="more-filters">
+        <%= link_to "More Filters"%>
+      </li>
+    </ul>
+  </div>
 
+<div class="index-container">
 
-<% @venues.each do |venue| %>
-  <%= link_to venue.name, venue_path(venue) %>
-  <%= link_to "Delete", venue_path(venue),
-    method: :delete,
-    data: { confirm: "Are you sure?" } %>
-  <%= link_to "Edit", edit_venue_path(venue)%>
-<% end %>
+  <div id="listings">
+    <% @venues.each do |venue| %>
+    <%= link_to venue_path(venue) do %>
+    <div class="venue-card">
+      <div class="image" style="background-image: url(<%= venue.picture%> )"></div>
+      <div class="card-product-info">
+          <h1><%= venue.name %></h1>
+          <h2><%= venue.capacity %> Guests</h2>
+          <p>$<%= venue.price_per_hour %>/hr</p>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+  </div>
+  <div id="map-container">
+    <div id="map"></div>
+  </div>
+</div>
+

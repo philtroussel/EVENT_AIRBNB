@@ -1,3 +1,6 @@
+.container{
+  display:flex;
+}
 .venue-card {
   display: flex;
   margin: 1rem auto;
@@ -18,7 +21,7 @@
   height: 200px;
 }
 .image {
-  width: 200px;
+  width: 225px;
   background-size: cover;
   background-position: center;
   transition: transform .2s;
@@ -29,24 +32,30 @@
   background:white;
   flex-grow: 1;
   z-index: 1;
+
 }
 .card-product-info h3{
   margin:0px;
   font-size:12px;
+  text-decoration:none;
 }
 
 .card-product-info h2{
   margin:0px;
   font-size: 12px;
+  text-decoration:none;
 }
 .card-product-info h1{
   margin-bottom: 0px;
+  text-decoration:none;
 }
 
 .card-product-info p{
-  justify-content: right;
+  float: right;
   margin-bottom: 0px;
-  margin-top:60px;
+  margin-top:50px;
+  text-decoration: none;
 }
+
 
 
