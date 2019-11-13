@@ -1,9 +1,20 @@
 class VenuesController < ApplicationController
   def index
+
+    venues = policy_scope(Venue)
+    @venues = venues.geocoded
+
+    @markers = @venues.map do |venue|
+      {
+        lat: venue.latitude,
+        lng: venue.longitude
+      }
+    end
+
     # use scope to show all venues => checks venue_policy scope.all for all venues
-    @venues = policy_scope(Venue)
     # for future to show only venues of owner
     # => scope.where(user: user) on the venue policy
+
   end
 
   def show
