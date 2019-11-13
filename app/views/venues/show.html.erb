@@ -1,2 +1,12 @@
 <h1>Venues#show</h1>
 <p>Find me in app/views/venues/show.html.erb</p>
+<%= simple_form_for [@venue, @booking] do |f| %>
+<input type="hidden" id="price" name="price">
+  <%= f.input :check_in_date_time, as: :datetime %>
+  <%= f.input :check_out_date_time, as: :datetime %>
+  <%= f.button :submit %>
+<% end %>
+
+<h1 id="total"></h1>
+
+<%= javascript_pack_tag "venue_calculator" %>
