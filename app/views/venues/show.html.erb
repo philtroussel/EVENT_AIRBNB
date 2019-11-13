@@ -1,12 +1,57 @@
-<h1>Venues#show</h1>
-<p>Find me in app/views/venues/show.html.erb</p>
-<%= simple_form_for [@venue, @booking] do |f| %>
-<input type="hidden" id="price" name="price">
-  <%= f.input :check_in_date_time, as: :datetime %>
-  <%= f.input :check_out_date_time, as: :datetime %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container-fluid">
+  <div class="row row-pictures">
+      <div class="col-sm-5 col-picture">
+        <div class="background-picture" style="background-image: url('https://images.unsplash.com/photo-1517484030358-fd0cca3d33d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2302&q=80');"></div>
+      </div>
+      <div class="col-sm-3 col-picture">
+        <div class="background-picture" style="background-image: url('https://images.unsplash.com/photo-1463183547458-6a2c760d0912?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80');"></div>
+      </div>
+    <div class="col-sm-4 col-picture">
+      <div class="background-picture half-size" style="background-image: url('https://images.unsplash.com/photo-1516600164266-f3b8166ae679?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');"></div>
+      <div class="background-picture half-size" style="background-image: url('https://images.unsplash.com/photo-1500840922267-8ff91fbf85aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');"></div>
+    </div>
+  </div>
 
-<h1 id="total"></h1>
+  <div class="row row-info">
+    <div class="col-sm-4 col-booking">
+      <h2>10$ per hour</h2>
+        <%= simple_form_for [@venue, @booking] do |f| %>
+        <input type="hidden" id="price" name="price">
+          <%= f.input :check_in_date_time, as: :datetime %>
+          <%= f.input :check_out_date_time, as: :datetime %>
+          <%= f.button :submit, class: "btn btn-white"%>
+        <% end %>
 
-<%= javascript_pack_tag "venue_calculator" %>
+        <h1 id="total"></h1>
+
+        <%= javascript_pack_tag "venue_calculator" %>
+    </div>
+
+    <div class="col-sm-6 col-resume">
+      <div class="resume-text">
+        <h2>Spacious loft with outdoor seating</h2>
+        <p>Sort of venue (garden, living room,...):</p>
+        <p>Capacity:</p>
+        <p>Location:</p>
+        <p>Communication:</p>
+      </div>
+      <div class="resume-avatar">
+        <img src="https://kitt.lewagon.com/placeholder/users/arthur-littm" class="avatar">
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-description">
+    <div class="col-sm-7 col-description">
+      <h3>DESCRIPTION //</h3>
+      <p>Mansions and villas are perfect venues to organize exclusive events in a breathtaking atmosphere. Looking for the magical setting for that spectacular grand event? Look no further than the venue of renting a mansion. Mansions can be rented in their entirety as well as by levels or rooms. The parlor and library rooms house a comfortable ambience with a secret getaway from the hustle and bustle of the dance floor in the ballroom. Perhaps the entire space of the first floor will fit the needs of the event which generally include the kitchen, backyard, garden area, ballroom, and other additional rooms all decorated with antiques to catch</p>
+      <h3>AMENITIES //</h3>
+      <p>...</p>
+      <h3>AVAILABILITY //</h3>
+      <p>calendar</p>
+      <h3>REVIEWS //</h3>
+      <p>C1, 2, 3, 4, 5,...</p>
+    </div>
+  </div>
+
+</div>
