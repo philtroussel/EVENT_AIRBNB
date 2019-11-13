@@ -1,21 +1,25 @@
-<% @bookings.each do |booking|%>
-  <div class="bookings-container">
-    <div class="booking-image" style="background-image: url('https://images.pexels.com/photos/442559/pexels-photo-442559.jpeg?auto=compress&cs=tinysrgb');">
-    </div>
-    <div class="booking-details">
-      <p>
-        <%= booking.check_in_date_time %>
-        <%= booking.check_out_date_time %>
-      </p>
+<div class="booking-index-page">
+  <h1>Upcoming Venue Bookings</h1>
+  <div class="row">
+    <% @bookings.each do |booking|%>
+    <div class="col-md-4">
+    <div class="bookings-container">
+      <div class="booking-image" style="background-image: url(<%= booking.venue.picture %>)">
+      </div>
+      <div class="booking-details">
+        <p>
+          <%= booking.check_in_date_time %>
+          <%= booking.check_out_date_time %>
+        </p>
 
-      <h1>
-          <%= booking.venue.name  %>
-      </h1>
+        <h1>
+            <%= booking.venue.name  %>
+        </h1>
 
-      <p class="description"><%= booking.venue.description %></p>
-      <a href="#0" class="link for more details">
-      Show event details
-      </a>
+        <p class="description"><%= booking.venue.description %></p>
+      </div>
     </div>
+    </div>
+  <% end %>
   </div>
-<% end %>
+</div>
