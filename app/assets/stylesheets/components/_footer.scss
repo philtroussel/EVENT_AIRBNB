@@ -17,7 +17,7 @@
 }
 
 .footer-links a {
-  color: black;
+  color: $black;
   opacity: 0.5;
   text-decoration: none;
   padding: 0px 10px;
@@ -26,5 +26,5 @@
 .footer-links a:hover {
   opacity: 1;
   text-decoration: none;
-  color: black;
+  color: $black;
 }
