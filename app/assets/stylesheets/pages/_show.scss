@@ -38,14 +38,60 @@
 }
 
 .row-info {
-
+  background-color: #E6E2DD;
 }
 
 .col-booking {
   background-color: #D48166;
+  padding: 3%;
+  margin-left: 10px;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 
 .col-resume {
   background-color: #E6E2DD;
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 1%;
+  margin-left: 10px;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border: 1px solid rgb(235,235,235);
+  height: -webkit-fill-available;
 }
 
+.col-resume .resume-text {
+  flex-grow: 1;
+  padding: 0 24px;
+}
+
+.col-resume p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.resume-avatar {
+  margin-right: 50px;
+  margin-bottom: auto;
+  margin-top: 23px;
+}
+
+.row-description {
+  background-color: #E6E2DD;
+  justify-content: flex-end;
+}
+
+.col-description {
+  padding: 1%;
+  margin-left: 10px;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}

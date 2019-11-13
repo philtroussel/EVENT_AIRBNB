@@ -14,10 +14,43 @@
 
   <div class="row row-info">
     <div class="col-sm-4 col-booking">
-      <p>While bright color palettes have practically ruled website deign for a few years, there’s a shift back to more muted palettes for some projects. The fleshy tone of Mangrove Hotel is warm and compliments the content well. (This same color has also been appearing in some Twitter marketing communications.)</p>
+      <h2>10$ per hour</h2>
+        <%= simple_form_for [@venue, @booking] do |f| %>
+        <input type="hidden" id="price" name="price">
+          <%= f.input :check_in_date_time, as: :datetime %>
+          <%= f.input :check_out_date_time, as: :datetime %>
+          <%= f.button :submit, class: "btn btn-white"%>
+        <% end %>
+
+        <h1 id="total"></h1>
+
+        <%= javascript_pack_tag "venue_calculator" %>
     </div>
-    <div class="col-sm-8 col-resume">
-      <p>While bright color palettes have practically ruled website deign for a few years, there’s a shift back to more muted palettes for some projects. The fleshy tone of Mangrove Hotel is warm and compliments the content well. (This same color has also been appearing in some Twitter marketing communications.)</p>
+
+    <div class="col-sm-6 col-resume">
+      <div class="resume-text">
+        <h2>Spacious loft with outdoor seating</h2>
+        <p>Sort of venue (garden, living room,...):</p>
+        <p>Capacity:</p>
+        <p>Location:</p>
+        <p>Communication:</p>
+      </div>
+      <div class="resume-avatar">
+        <img src="https://kitt.lewagon.com/placeholder/users/arthur-littm" class="avatar">
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-description">
+    <div class="col-sm-7 col-description">
+      <h3>DESCRIPTION //</h3>
+      <p>Mansions and villas are perfect venues to organize exclusive events in a breathtaking atmosphere. Looking for the magical setting for that spectacular grand event? Look no further than the venue of renting a mansion. Mansions can be rented in their entirety as well as by levels or rooms. The parlor and library rooms house a comfortable ambience with a secret getaway from the hustle and bustle of the dance floor in the ballroom. Perhaps the entire space of the first floor will fit the needs of the event which generally include the kitchen, backyard, garden area, ballroom, and other additional rooms all decorated with antiques to catch</p>
+      <h3>AMENITIES //</h3>
+      <p>...</p>
+      <h3>AVAILABILITY //</h3>
+      <p>calendar</p>
+      <h3>REVIEWS //</h3>
+      <p>C1, 2, 3, 4, 5,...</p>
     </div>
   </div>
 

@@ -1,0 +1,7 @@
+<% @bookings.each do |booking|%>
+  <%= booking.venue.name  %>
+  <%= booking.venue.description %>
+  <%= booking.check_in_date_time %>
+  <%= booking.check_out_date_time %>
+  <%= booking.total_price %>
+<% end %>
