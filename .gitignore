@@ -35,6 +35,7 @@ yarn-debug.log*
 
 # Ignore .env file containing credentials.
 .env*
+MAPBOX_API_KEY=pk.eyJ1Ijoib2VnZzk1IiwiYSI6ImNrMnhvaXJjaTBzZGUzYnBnNDlxcWk2ZXQifQ.uP0juhrMA-c38a_iCmrUsA
 
 # Ignore Mac and Linux file system files
 *.swp
