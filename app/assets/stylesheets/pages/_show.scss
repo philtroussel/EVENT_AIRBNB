@@ -1,0 +1,51 @@
+.row-pictures {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3px;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 400px;
+  background-color: #E6E2DD;
+}
+
+.picture1 {
+  width: 50%;
+}
+
+.picture2 {
+  width: 25%;
+}
+
+.col-picture {
+  height: 400px;
+}
+
+.background-picture {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.half-size {
+  height: 200px;
+}
+.half-size:first-child {
+  margin-bottom: 10px;
+}
+
+.row-info {
+
+}
+
+.col-booking {
+  background-color: #D48166;
+}
+
+.col-resume {
+  background-color: #E6E2DD;
+}
+
