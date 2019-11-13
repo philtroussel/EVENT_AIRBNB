@@ -4,6 +4,7 @@ class VenuesController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
     @venue = Venue.find(params[:id])
   end
 
@@ -13,7 +14,8 @@ class VenuesController < ApplicationController
 
   def create
     @venue = Venue.new(venue_params)
-    @venue.save
+    @venue.user = current_user
+    @venue.save!
     redirect_to venue_path(@venue)
   end
 

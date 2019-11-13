@@ -70,6 +70,15 @@ puts 'Creating users'
   user.save!
 end
 
+core_user = User.new(
+  first_name: 'Dan',
+  last_name: 'Smith',
+  email: 'dan@gmail.com',
+  password: '12345678',
+  role: 'butt pirate'
+  )
+core_user.save!
+
 puts "Now #{User.count} users"
 puts 'Creating venues'
 
