@@ -1,38 +1,39 @@
-<h1>Venues#new</h1>
-<p>Find me in app/views/venues/new.html.erb</p>
+<div class="container">
+  <h1 class="header">Create a new venue</h2>
+    <div class="form-new"
+      <%= simple_form_for(@venue) do |f| %>
+        <div class="form-group">
+          <%= f.label :NAME %>
+          <%= f.text_field :name, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :description %>
+          <%= f.text_field :description, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :price_per_hour %>
+          <%= f.text_field :price_per_hour, class: 'form-control' %>
+        </div>
 
 
-<%= simple_form_for(@venue) do |f| %>
-  <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
+        <div class="form-group">
+          <%= f.label :capacity %>
+          <%= f.text_field :capacity, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :address %>
+          <%= f.text_field :address, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :picture %>
+          <%= f.text_field :picture, class: 'form-control' %>
+        </div>
+
+        <%= f.submit class: 'btn btn-white' %>
+      <% end %>
   </div>
-
-  <div class="form-group">
-    <%= f.label :description %>
-    <%= f.text_field :description, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :price_per_hour %>
-    <%= f.text_field :price_per_hour, class: 'form-control' %>
-  </div>
-
-
-  <div class="form-group">
-    <%= f.label :capacity %>
-    <%= f.text_field :capacity, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :address %>
-    <%= f.text_field :address, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :picture %>
-    <%= f.text_field :picture, class: 'form-control' %>
-  </div>
-
-  <%= f.submit class: 'btn btn-primary' %>
-<% end %>
+</div>
