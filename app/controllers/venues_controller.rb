@@ -1,6 +1,8 @@
 class VenuesController < ApplicationController
   def index
-    @venues = Venue.geocoded
+
+    venues = policy_scope(Venue)
+    @venues = venues.geocoded
 
     @markers = @venues.map do |venue|
       {
@@ -8,36 +10,47 @@ class VenuesController < ApplicationController
         lng: venue.longitude
       }
     end
+
+    # use scope to show all venues => checks venue_policy scope.all for all venues
+    # for future to show only venues of owner
+    # => scope.where(user: user) on the venue policy
+
   end
 
   def show
     @booking = Booking.new
     @venue = Venue.find(params[:id])
+    authorize @venue
   end
 
   def new
     @venue = Venue.new
+    authorize @venue
   end
 
   def create
     @venue = Venue.new(venue_params)
     @venue.user = current_user
+    authorize @venue
     @venue.save!
     redirect_to venue_path(@venue)
   end
 
   def edit
     find_venue
+    authorize @venue
   end
 
   def update
     find_venue
+    authorize @venue
     @venue.update(venue_params)
     redirect_to venue_path(@venue)
   end
 
   def destroy
-    @venue = find_venue
+    find_venue
+    authorize @venue
     @venue.destroy
     redirect_to venues_path
   end
@@ -52,3 +65,9 @@ class VenuesController < ApplicationController
     params.require(:venue).permit(:name, :description, :price_per_hour, :capacity, :address)
   end
 end
+
+# to hide link to actions in html.erb file
+# => <% if policy(venue).edit? %>
+# => <% link_to 'Edit', edit_venue_path(venue) %>
+# => <% end %>
+# => if not eaching through, than call it on the class

@@ -3,6 +3,7 @@
 
     <div class="wrapper-left col-6">
       <form class="form-filter">
+      <h2>Book unique places to organize your event and enjoy it.</h2>
         <div class="form-group">
           <label for="inputWhere">WHERE</label>
           <input type="city" class="form-control" id="inputWhere" placeholder="Mexico City">
@@ -25,11 +26,32 @@
           <input type="capacity" class="form-control" id="inputCapacity" placeholder="... guests">
         </div>
 
-        <button type="submit" class="btn btn-white">SUBMIT</button>
+        <button type="submit" class="btn btn-white btn-submit-filter">SUBMIT</button>
+        <a href="/venues" type="submit" class="btn btn-white btn-submit-filter">SUBMIT</a>
       </form>
     </div>
 
     <div class="wrapper-right col-6">
+      <div class="about">
+        <h2>Explore</h2>
+        <a href="/venues">
+          <div class="card-explore" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_url('living-room-1.jpg')  %>)">
+            VENUES
+          </div>
+        </a>
+      </br>
+        <a href="#">
+          <div class="card-explore" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_url('catering-1.jpg')  %>)">
+            CATERINGS
+          </div>
+        </a>
+      </br>
+        <a href="#">
+          <div class="card-explore" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_url('music-1.jpg')  %>)">
+            MUSICIANS & DJS
+          </div>
+        </a>
+      </div>
     </div>
 
   </div>
