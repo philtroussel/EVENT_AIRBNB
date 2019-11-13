@@ -3,7 +3,7 @@
     <ul class="navbar menu"style="list-style-type:none">
       <% if user_signed_in? %>
         <li class="nav-links active">
-          <a class="nav-links" <%= link_to "HOME"%></a>
+          <a class="nav-links" <%= link_to "HOME", root_path %></a>
         </li>
 
         <li class="nav-links">
@@ -16,7 +16,7 @@
         <li class="nav-links dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "My bookings", "#", class: "dropdown-item" %>
+            <%= link_to "My bookings", bookings_path, class: "dropdown-item" %>
             <%= link_to "See profile", "#", class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
@@ -27,7 +27,7 @@
         </li>
 
         <li class="nav-links">
-          <a class="nav-links" <%= link_to "SIGN IN", new_user_session_path%> </a>
+          <a class="nav-links" <%= link_to "SIGN UP", new_user_registration_path%> </a>
         </li>
       <% end %>
     </ul>
