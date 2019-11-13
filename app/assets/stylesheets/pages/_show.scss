@@ -9,7 +9,7 @@
   overflow-x: hidden;
   overflow-y: hidden;
   height: 400px;
-  background-color: #E6E2DD;
+  background-color: $gray;
 }
 
 .picture1 {
@@ -38,11 +38,11 @@
 }
 
 .row-info {
-  background-color: #E6E2DD;
+  background-color: $gray;
 }
 
 .col-booking {
-  background-color: #D48166;
+  background-color: $orange;
   padding: 3%;
   margin-left: 10px;
   margin-top: 50px;
@@ -54,7 +54,7 @@
 }
 
 .col-resume {
-  background-color: #E6E2DD;
+  background-color: $orange;
   display: flex;
   align-items: center;
   background: white;
@@ -84,7 +84,7 @@
 }
 
 .row-description {
-  background-color: #E6E2DD;
+  background-color: $gray;
   justify-content: flex-end;
 }
 

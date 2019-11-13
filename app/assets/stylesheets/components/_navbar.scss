@@ -1,9 +1,7 @@
 .navbar-airbnb {
   justify-content: space-between;
-  background: white;
-  background-color: white;
-  transition: 0.5s background-color ease;
   background-color: transparent;
+  transition: 0.5s background-color ease;
 }
 
 .navbar-airbnb .navbar-collapse {
@@ -29,7 +27,7 @@
 }
 
 .nav-line {
-  border-top: 1px solid black;
+  border-top: 1px solid $black;
   width: auto;
   padding-bottom: 10px;
 }
@@ -46,7 +44,7 @@
   padding: 10px;
   text-decoration:none;
   text-rendering: auto;
-  color: buttontext;
+  color: $black;
   letter-spacing: normal;
   word-spacing: normal;
   text-transform: none;
@@ -60,7 +58,7 @@
   line-height: 1.43;
   color: #484848;
   transition-timing-function: ease-out !important;
-  background-image: linear-gradient(black, black), linear-gradient(transparent, transparent);
+  background-image: linear-gradient($black, $black), linear-gradient(transparent, transparent);
   background-size: 0 5px, auto;
   background-repeat: no-repeat;
   background-position: center bottom;
