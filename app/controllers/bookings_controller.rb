@@ -13,5 +13,6 @@ class BookingsController < ApplicationController
     @booking.total_price = params[:price]
     @booking.venue = @venue
     @booking.save!
+    redirect_to bookings_path
   end
 end

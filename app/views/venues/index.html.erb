@@ -32,19 +32,3 @@
     <div id="map"></div>
   </div>
 </div>
-
-
-<% @venues.each do |venue| %>
-  <%= link_to venue.name, venue_path(venue) %>
-  <%= link_to "Delete", venue_path(venue),
-    method: :delete,
-    data: { confirm: "Are you sure?" } %>
-  <%= link_to "Edit", edit_venue_path(venue)%>
-<% end %>
-
-
-
-
-<%= link_to "Add Venue", new_venue_path %>
-
-
