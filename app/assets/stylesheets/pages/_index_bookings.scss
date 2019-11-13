@@ -1,0 +1,26 @@
+.bookings-container{
+  width: 360px;
+  overflow: hidden;
+  border-radius: 1px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  // padding: 30px;
+  margin: 75px auto;
+
+}
+.booking-details{
+  padding:20px;
+}
+.booking-image{
+  background-size:cover;
+  width:360px;
+  height:200px;
+}
+.booking-details p{
+  font-weight: medium;
+  font-size: 15px;
+}
+.booking-details h1{
+  line-height:1.25;
+  font-weight:bold;
+  font-size: 20px;
+}

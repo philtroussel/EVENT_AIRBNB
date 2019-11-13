@@ -1,7 +1,21 @@
 <% @bookings.each do |booking|%>
-  <%= booking.venue.name  %>
-  <%= booking.venue.description %>
-  <%= booking.check_in_date_time %>
-  <%= booking.check_out_date_time %>
-  <%= booking.total_price %>
+  <div class="bookings-container">
+    <div class="booking-image" style="background-image: url('https://images.pexels.com/photos/442559/pexels-photo-442559.jpeg?auto=compress&cs=tinysrgb');">
+    </div>
+    <div class="booking-details">
+      <p>
+        <%= booking.check_in_date_time %>
+        <%= booking.check_out_date_time %>
+      </p>
+
+      <h1>
+          <%= booking.venue.name  %>
+      </h1>
+
+      <p class="description"><%= booking.venue.description %></p>
+      <a href="#0" class="link for more details">
+      Show event details
+      </a>
+    </div>
+  </div>
 <% end %>
