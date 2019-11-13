@@ -1,2 +1,37 @@
 <h1>Edit your Venue</h1>
 <p>Find me in app/views/venues/edit.html.erb</p>
+
+<%= simple_form_for(@venue) do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_field :description, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :price_per_hour %>
+    <%= f.text_field :price_per_hour, class: 'form-control' %>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.label :capacity %>
+    <%= f.text_field :capacity, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :address %>
+    <%= f.text_field :address, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :picture %>
+    <%= f.text_field :picture, class: 'form-control' %>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
