@@ -1,11 +1,14 @@
 // Specific CSS for your home-page
-container {
+.container-fluid {
   margin: auto;
   max-width: 2000px !important;
   margin-top: 20px;
   display: contents;
+  padding-bottom:50px;
 }
-
+.row{
+  justify-content:space-evenly;
+}
 body {
   color: $black;
   font-size: 18px;
@@ -44,7 +47,14 @@ a:hover {
 }
 
 .wrapper-left {
-  background-color: $orange;
+  background-color: rgb(212,129,102);
+  border-radius: 20px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  margin: 20px 20px 20px 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .row {
@@ -52,18 +62,27 @@ a:hover {
 }
 
 .form-filter {
-  padding: 20%;
+  padding: 15%;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
 }
 
 .wrapper-right {
-  background-color: $gray;
+  justify-content:center;
+  display: flex;
+  align-items: center;
+  padding: 1%;
+  height: -webkit-fill-available;
+  flex-grow: 1;
+  padding: 0 24px;
+  margin: 20px 20px 20px 20px;
 }
 
 .about {
-  padding: 20%;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  width:75%
 }
 
 .about a img {
@@ -87,7 +106,7 @@ a:hover {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   font-family: 'Oswald', sans-serif !important;
   letter-spacing: 2px !important;
-
+  width:100%;
 }
 
 .card-explore:hover {
