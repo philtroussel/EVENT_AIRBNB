@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
 
-    <div class="wrapper-left col-6">
+    <div class="wrapper-left col-sm-4">
       <form class="form-filter">
       <h2>Book unique places to organize your event and enjoy it.</h2>
         <div class="form-group">
@@ -15,7 +15,7 @@
             <input type="date" class="form-control" id="inputCheckIn" placeholder="dd/mm/yyyy">
           </div>
 
-          <div class="form-group col-sm-6">
+          <div class="form-group col-sm-7">
             <label for="inputCheckOut">CHECK OUT</label>
             <input type="date" class="form-control" id="inputCheckOut" placeholder="dd/mm/yyyy">
           </div>
@@ -26,12 +26,11 @@
           <input type="capacity" class="form-control" id="inputCapacity" placeholder="... guests">
         </div>
 
-        <button type="submit" class="btn btn-white btn-submit-filter">SUBMIT</button>
-        <a href="/venues" type="submit" class="btn btn-white btn-submit-filter">SUBMIT</a>
+        <button type="submit" class="btn btn-white btn-submit-filter"><%= link_to "SUBMIT", venues_path %></button>
       </form>
     </div>
 
-    <div class="wrapper-right col-6">
+    <div class="wrapper-right col-sm-5">
       <div class="about">
         <h2>Explore</h2>
         <a href="/venues">
