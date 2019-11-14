@@ -10,9 +10,22 @@
   height: 100vh;
 }
 
-.index-image {
-  width: 50%;
+.container-image {
+  width: 100%;
   background-size: cover;
+}
+
+.carousel {
+  width: 50%;
+}
+
+.index-image {
+  width: 100%;
+  background-size: cover;
+}
+
+.carousel-control-next {
+  padding-left: 25%;
 }
 
 .venue-card h2 {
@@ -40,17 +53,14 @@
     text-decoration: none;
 }
 
-#listings, #map-container {
-  height: 100%;
-}
 
-#map-container{
+.map-container{
   padding-top:50px;
   flex-basis:40%;
   padding-right: 50px;
 }
 
-#listings {
+.listings {
   flex-basis:60%;
   overflow-y: scroll;
   padding: 30px 36px;
