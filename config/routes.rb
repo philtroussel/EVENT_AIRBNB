@@ -7,6 +7,11 @@ Rails.application.routes.draw do
     resources :bookings, only: [:create]
   end
 
+  resources :caterings do
+    resources :bookings, only: [:index]
+  end
+
   resources :bookings, only: [:index]
+
 
 end
