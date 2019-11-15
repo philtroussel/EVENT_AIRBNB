@@ -61,3 +61,10 @@
 </div>
 
 <%= javascript_pack_tag "venue_calculator" %>
+
+
+<% unless current_user.favorite_venues.exists?(id: @venue.id) %>
+<%= link_to 'Add to favorites', favorite_venues_path(venue_id: @venue), method: :post %>
+<%- else -%>
+<%= link_to 'Remove from favorites', favorite_venue_path(@venue), method: :delete %>
+<% end %>

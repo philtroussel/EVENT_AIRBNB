@@ -1,6 +1,5 @@
 class VenuesController < ApplicationController
   def index
-
     venues = policy_scope(Venue)
     @venues = venues.geocoded
 
@@ -14,7 +13,6 @@ class VenuesController < ApplicationController
     # use scope to show all venues => checks venue_policy scope.all for all venues
     # for future to show only venues of owner
     # => scope.where(user: user) on the venue policy
-
   end
 
   def show

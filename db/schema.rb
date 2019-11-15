@@ -29,9 +29,9 @@ ActiveRecord::Schema.define(version: 2019_11_15_000302) do
   end
 
   create_table "favorites", force: :cascade do |t|
-    t.bigint "user_id"
     t.string "favorited_type"
     t.bigint "favorited_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["favorited_type", "favorited_id"], name: "index_favorites_on_favorited_type_and_favorited_id"

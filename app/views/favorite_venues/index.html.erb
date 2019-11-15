@@ -1,4 +1,6 @@
-  <div class="filters">
+<h1>FAVORITES</h1>
+
+ <div class="filters">
     <button type="submit" class="btn btn-white btn-submit-filter">DATES</button>
     <button type="submit" class="btn btn-white btn-submit-filter">GUESTS</button>
     <button type="submit" class="btn btn-white btn-submit-filter">MORE FILTERS</button>
@@ -7,8 +9,8 @@
 <div class="index-container slideshow-container">
 
   <div class="listings">
-    <% @venues.each do |venue| %>
-    <%= link_to venue_path(venue) do %>
+    <% @favorites.each do |favorite| %>
+    <%= link_to venue_path(favorite.favorited) do %>
 
     <div class="venue-card">
 
@@ -35,9 +37,9 @@
     </div>
 
       <div class="card-product-info">
-          <h2><%= venue.name %></h2>
-          <h3><%= venue.capacity %> Guests</h3>
-          <p>$<%= venue.price_per_hour %>/hr</p>
+          <h2><%= favorite.favorited.name %></h2>
+          <h3><%= favorite.favorited.capacity %> Guests</h3>
+          <p>$<%= favorite.favorited.price_per_hour %>/hr</p>
       </div>
     </div>
     <% end %>
