@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   end
 
   resources :bookings, only: [:index]
+  resources :favorite_venues, only: [:create, :destroy]
 
 end
