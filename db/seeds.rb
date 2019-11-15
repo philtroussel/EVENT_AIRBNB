@@ -84,13 +84,13 @@ caterings = [
   {
     name: "Ardente",
     catering_type: "Italian",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    description: "trattoria serving the most authentic Italian food. We buy all our products in Italy. We cook 100% home made. With love.",
     address: "Parque Mexico Condesa"
     },
   {
     name: "Parcela",
     catering_type: "Mexican",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    description: "Food to share and Bar. The chef Paul-Antoine Bertin serves small seasonal plates with natural wines and expertly presented cocktails.",
     address: "Roma Norte"
     }
 ]
