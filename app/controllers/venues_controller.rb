@@ -1,12 +1,29 @@
 class VenuesController < ApplicationController
+
   def index
+
     venues = policy_scope(Venue)
     @venues = venues.geocoded
+
+    venues_f_name = Venue.search_by_address(params[:city])
+
+    venues_f_geo = venues_f_name.geocoded
+
+    venue = venues_f_geo.where(capacity: params[:capacity].to_s)
+
+    @venues = policy_scope(venue)
+
+    datetime_checkin = [params[:datetimein], params[:hourtimein]].join(" ").to_datetime
+    datetime_checkout = [params[:datetimeout], params[:hourtimeout]].join(" ").to_datetime
+
+    #@venues = venues.joins(:bookings)
+
 
     @markers = @venues.map do |venue|
       {
         lat: venue.latitude,
-        lng: venue.longitude
+        lng: venue.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { venue: venue })
       }
     end
 
@@ -69,3 +86,22 @@ end
 # => <% link_to 'Edit', edit_venue_path(venue) %>
 # => <% end %>
 # => if not eaching through, than call it on the class
+
+
+
+#  def filtered_venues
+#    venues_f_name = Venue.search_by_address(params[:city])
+#
+#   venues_f_geo = venues_f_name.geocoded
+#
+#    venue_f_cap = venues_f_geo.where(capacity: params[:capacity].to_s)
+#
+#    venues = policy_scope(venue_f_cap)
+#
+#    datetime_checkin = [params[:datetimein], params[:hourtimein]].join(" ").to_datetime
+#    datetime_checkout = [params[:datetimeout], params[:hourtimeout]].join(" ").to_datetime
+#
+#    venues.left_outer_joins(:bookings)
+#          .where("(check_in_date_time < ? OR check_out_date_time > ?) AND check_out_date_time > ?",
+#          datetime_checkin, datetime_checkout, datetime_checkout)
+#  end

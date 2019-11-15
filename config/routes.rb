@@ -7,6 +7,10 @@ Rails.application.routes.draw do
     resources :bookings, only: [:create]
   end
 
+  resources :caterings do
+    resources :bookings, only: [:index, :show]
+  end
+
   resources :bookings, only: [:index]
   resources :favorite_venues, only: [:index, :create, :destroy]
 
