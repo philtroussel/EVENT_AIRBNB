@@ -21,9 +21,28 @@
 
 .card-product-info p {
   margin-top: 10px;
+  font-size: 10px !important;
+}
+
+.index-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container-image {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel {
+  width: 50%;
 }
 
 .index-image {
   width: 100%;
-  background-size: cover !important;
+  background-size: cover;
 }
+
+
