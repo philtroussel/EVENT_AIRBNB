@@ -3,6 +3,7 @@ puts 'Deleting previous data'
 Booking.destroy_all
 Venue.destroy_all
 User.destroy_all
+Catering.destroy_all
 
 
 venues = [
@@ -26,6 +27,21 @@ venues = [
     address: "campeche 233, colonia Condesa",
     latitude: 19.4104139,
     longitude: -99.1758404
+    }
+]
+
+caterings = [
+  {
+    name: "Ardente",
+    catering_type: "Italian",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    address: "Parque Mexico Condesa"
+    },
+  {
+    name: "Parcela",
+    catering_type: "Mexican",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    address: "Roma Norte"
     }
 ]
 
@@ -58,6 +74,16 @@ venues.each do |venue|
   sleep 2.5
 end
 
+puts 'Creating caterings'
+
+caterings.each do |catering|
+  cat = Catering.new(catering)
+  user = User.first
+  cat.user = user
+  cat.save!
+  sleep 2.5
+end
+
 puts 'Creating bookings'
 
 bookings = %w(1 2 3 4 5 6)
@@ -65,6 +91,7 @@ bookings = %w(1 2 3 4 5 6)
   book = Booking.new
   book.user = User.find(rand(User.first.id..User.last.id))
   book.venue = Venue.find(rand(Venue.first.id..Venue.last.id))
+  book.catering = Catering.find(rand(Catering.first.id..Catering.last.id))
   book.save!
 end
 
