@@ -1,32 +1,35 @@
 <div class="container-fluid">
   <div class="row">
+    <div class="wrapper-left col-6">
+      <form class="form-filter" action="/venues" method="get">
 
-    <div class="wrapper-left col-sm-4">
-      <form class="form-filter">
       <h2>Book unique places to organize your event and enjoy it.</h2>
         <div class="form-group">
           <label for="inputWhere">WHERE</label>
-          <input type="city" class="form-control" id="inputWhere" placeholder="Mexico City">
+          <input type="city" name='city' class="form-control" id="inputWhere" placeholder="Mexico City" >
         </div>
 
         <div class="form-row">
           <div class="form-group col-sm-6">
             <label for="inputCheckIn">CHECK IN</label>
-            <input type="date" class="form-control" id="inputCheckIn" placeholder="dd/mm/yyyy">
+            <input type="date" name='datetimein' class="form-control" id="inputCheckIn" placeholder="mm-dd">
+            <input type="time" name='hourtimein' class="form-control" id="hourInputCheckIn">
           </div>
 
           <div class="form-group col-sm-7">
             <label for="inputCheckOut">CHECK OUT</label>
-            <input type="date" class="form-control" id="inputCheckOut" placeholder="dd/mm/yyyy">
+            <input type="date" name='datetimeout' class="form-control" id="inputCheckOut" placeholder="yyyy-mm-dd hh">
+            <input type="time" name='hourtimeout' class="form-control" id="hourInputCheckIn">
           </div>
         </div>
 
         <div class="form-group">
           <label for="inputCapacity">CAPACITY</label>
-          <input type="capacity" class="form-control" id="inputCapacity" placeholder="... guests">
+          <input type="capacity" name='capacity' class="form-control" id="inputCapacity" placeholder="number of guests">
         </div>
 
-        <button type="submit" class="btn btn-white btn-submit-filter"><%= link_to "SUBMIT", venues_path %></button>
+        <button type="submit" class="btn btn-white btn-submit-filter">SUBMIT</button>
+
       </form>
     </div>
 
