@@ -1,8 +1,8 @@
 <div class="container-fluid">
   <div class="row">
-
     <div class="wrapper-left col-6">
       <form class="form-filter" action="/venues" method="get">
+
       <h2>Book unique places to organize your event and enjoy it.</h2>
         <div class="form-group">
           <label for="inputWhere">WHERE</label>
@@ -16,7 +16,7 @@
             <input type="time" name='hourtimein' class="form-control" id="hourInputCheckIn">
           </div>
 
-          <div class="form-group col-sm-6">
+          <div class="form-group col-sm-7">
             <label for="inputCheckOut">CHECK OUT</label>
             <input type="date" name='datetimeout' class="form-control" id="inputCheckOut" placeholder="yyyy-mm-dd hh">
             <input type="time" name='hourtimeout' class="form-control" id="hourInputCheckIn">
@@ -29,10 +29,11 @@
         </div>
 
         <button type="submit" class="btn btn-white btn-submit-filter">SUBMIT</button>
+
       </form>
     </div>
 
-    <div class="wrapper-right col-6">
+    <div class="wrapper-right col-sm-5">
       <div class="about">
         <h2>Explore</h2>
         <a href="/venues">
@@ -41,7 +42,7 @@
           </div>
         </a>
       </br>
-        <a href="#">
+        <a href="/caterings">
           <div class="card-explore" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_url('catering-1.jpg')  %>)">
             <span>CATERINGS</span>
           </div>

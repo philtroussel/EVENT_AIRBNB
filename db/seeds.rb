@@ -3,6 +3,7 @@ puts 'Deleting previous data'
 Booking.destroy_all
 Venue.destroy_all
 User.destroy_all
+Catering.destroy_all
 
 
 venues = [
@@ -79,6 +80,21 @@ venues = [
     }
 ]
 
+caterings = [
+  {
+    name: "Ardente",
+    catering_type: "Italian",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    address: "Parque Mexico Condesa"
+    },
+  {
+    name: "Parcela",
+    catering_type: "Mexican",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    address: "Roma Norte"
+    }
+]
+
 puts 'Creating users'
 6.times do
   user = User.new(
@@ -105,5 +121,17 @@ venues.each do |venue|
   user = User.first
   ven.user = user
   ven.save!
+
+end
+
+puts 'Creating caterings'
+
+caterings.each do |catering|
+  cat = Catering.new(catering)
+  user = User.first
+  cat.user = user
+  cat.save!
+  sleep 2.5
+end
 end
 
