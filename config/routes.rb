@@ -8,10 +8,9 @@ Rails.application.routes.draw do
   end
 
   resources :caterings do
-    resources :bookings, only: [:index]
+    resources :bookings, only: [:index, :show]
   end
 
   resources :bookings, only: [:index]
-
 
 end

@@ -4,6 +4,12 @@ class CateringsController < ApplicationController
     @caterings = Catering.all
   end
 
+  def show
+    @booking = Booking.new
+    @catering = Catering.find(params[:id])
+    authorize @catering
+  end
+
   private
 
   def find_catering
