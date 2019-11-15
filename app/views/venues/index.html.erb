@@ -3,7 +3,13 @@
     <button type="submit" class="btn btn-white btn-submit-filter">PRICE</button>
     <button type="submit" class="btn btn-white btn-submit-filter">GUESTS</button>
     <button type="submit" class="btn btn-white btn-submit-filter">MORE FILTERS</button>
-    <button type="submit" class="btn btn-white btn-submit-filter other-side-btn"><%= link_to "I WANT A CATERER >>", caterings_path %></button>
+
+    <div class="pointer-container">
+    <button type="submit" class= "pointer-next" id="pointer"><%= link_to "I WANT A VENUE", venues_path %></button>
+    <button type="submit" class= "pointer-next" id="pointer"><%= link_to "I WANT A CATERER", caterings_path %></button>
+    <button type="submit" class= "pointer-next" id="pointer"><%= link_to "I WANT AN EXTRA", bookings_path %></button>
+    </div>
+
   </div>
 
   <div class="horizontal-line-for-filters"></div>

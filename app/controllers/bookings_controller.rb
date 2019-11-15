@@ -12,6 +12,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.total_price = params[:price]
     @booking.venue = @venue
+    @booking.catering = Catering.new()
     @booking.save!
     redirect_to bookings_path
   end
