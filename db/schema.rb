@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2019_11_15_000744) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -30,6 +29,15 @@ ActiveRecord::Schema.define(version: 2019_11_15_000744) do
     t.index ["venue_id"], name: "index_bookings_on_venue_id"
   end
 
+  create_table "caterings", force: :cascade do |t|
+    t.string "name"
+    t.string "catering_type"
+    t.string "description"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+  end
 
   create_table "favorites", force: :cascade do |t|
     t.string "favorited_type"
@@ -39,15 +47,6 @@ ActiveRecord::Schema.define(version: 2019_11_15_000744) do
     t.datetime "updated_at", null: false
     t.index ["favorited_type", "favorited_id"], name: "index_favorites_on_favorited_type_and_favorited_id"
     t.index ["user_id"], name: "index_favorites_on_user_id"
-
-  create_table "caterings", force: :cascade do |t|
-    t.string "name"
-    t.string "catering_type"
-    t.string "description"
-    t.string "address"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
