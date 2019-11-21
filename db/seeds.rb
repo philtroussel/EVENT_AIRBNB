@@ -27,7 +27,7 @@ venues = [
     capacity: "200 guests",
     address: "campeche 233, colonia Condesa",
     latitude: 19.4104139,
-    longitude: -99.1758404,
+    longitude: -99.1758404
     picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQux4HtTUSopoUMTSrMhkOI4lQLaEq3MdeZodSKy11LS101wgJQUg&s"
     },
 
@@ -37,7 +37,7 @@ venues = [
     picture: "https://images.unsplash.com/photo-1494672203374-c593733a6150?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80",
     price_per_hour: 11,
     capacity: "200 guests",
-    address: "direccion 210, colonia Condesa",
+    address: "campeche 233, colonia Condesa",
     latitude: 21.8628063,
     longitude: -102.2805333,
     picture: "https://www.uniquevenues.com/sites/uniquevenues.com/files/UNewHampPTP_BusinessSchool.jpg"

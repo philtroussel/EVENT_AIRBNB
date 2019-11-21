@@ -39,6 +39,16 @@ ActiveRecord::Schema.define(version: 2019_11_15_000744) do
     t.integer "user_id"
   end
 
+  create_table "favorites", force: :cascade do |t|
+    t.string "favorited_type"
+    t.bigint "favorited_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["favorited_type", "favorited_id"], name: "index_favorites_on_favorited_type_and_favorited_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -71,4 +81,5 @@ ActiveRecord::Schema.define(version: 2019_11_15_000744) do
 
   add_foreign_key "bookings", "users"
   add_foreign_key "bookings", "venues"
+  add_foreign_key "favorites", "users"
 end

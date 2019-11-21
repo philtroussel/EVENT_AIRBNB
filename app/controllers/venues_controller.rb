@@ -1,6 +1,10 @@
 class VenuesController < ApplicationController
 
   def index
+
+    venues = policy_scope(Venue)
+    @venues = venues.geocoded
+
     venues_f_name = Venue.search_by_address(params[:city])
 
     venues_f_geo = venues_f_name.geocoded
@@ -14,6 +18,7 @@ class VenuesController < ApplicationController
 
     #@venues = venues.joins(:bookings)
 
+
     @markers = @venues.map do |venue|
       {
         lat: venue.latitude,
@@ -25,7 +30,6 @@ class VenuesController < ApplicationController
     # use scope to show all venues => checks venue_policy scope.all for all venues
     # for future to show only venues of owner
     # => scope.where(user: user) on the venue policy
-
   end
 
   def show
